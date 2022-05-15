@@ -1,19 +1,71 @@
-
-title: Your awesome title
+title: neocom
+author: neocom
+url: https://neocom-io.github.io
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+description: > # this means to ignore newlines until "show_exerpts:"
+  I'm going to write an awesome description of this new site when I get a chance. <br/> I may even occasionally even write a blog about something interesting.
+show_excerpts: false # set to true to show excerpts on the homepage
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# jekyll-tagging (optional)
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+# jekyll-dash date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+dash:
+  # the way how dates should be displayed
+  date_format: "%b %-d, %Y"
+
+  # (optional) discqus comment configuration
+  # disqus:
+  #   shortname:
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    -  #url: https://twitter.com/bitbrain_
+    #icon: twitter-square
+    #color: cyan
+    - url: https://neocom.itch.io
+      icon: itch-io
+      color: red
+    - url: https://github.com/neocom-io
+      icon: github-square
+      color: purple
+
+  # wether the author box should be displayed
+  #show_author: true
+
+  # the animation speed of the scroll-in effect
+  animation_speed: 50
+
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: neocom-io
+  avatar_source: local
+  avatar_path: /public/avatar.gif
 
 # Build settings
-theme: minima
+theme: jekyll-dash
+
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
+#  - jekyll-seo-tag
+#  - jekyll-paginate
+  - liquid-md5
+  - jekyll/tagging
+
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 # Exclude from processing.
 # The following items will not be processed, by default.
